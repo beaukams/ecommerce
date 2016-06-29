@@ -33,7 +33,8 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_home' => true,
        '_configurator_step' => true,
        '_configurator_final' => true,
-       'EcomProduitBundle_homepage' => true,
+       'EcommerceProduitBundle_homepage' => true,
+       'AjoutProduit' => true,
     );
 
     /**
@@ -157,8 +158,13 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         return array(array (), array (  '_controller' => 'Sensio\\Bundle\\DistributionBundle\\Controller\\ConfiguratorController::finalAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/_configurator/final',  ),));
     }
 
-    private function getEcomProduitBundle_homepageRouteInfo()
+    private function getEcommerceProduitBundle_homepageRouteInfo()
     {
-        return array(array (  0 => 'name',), array (  '_controller' => 'Ecom\\ProduitBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'name',  ),  1 =>   array (    0 => 'text',    1 => '/produit/hello',  ),));
+        return array(array (  0 => 'name',), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'name',  ),  1 =>   array (    0 => 'text',    1 => '/hello',  ),));
+    }
+
+    private function getAjoutProduitRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajoutProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/ajout_produit',  ),));
     }
 }

@@ -1,0 +1,7 @@
+EcommerceProduitBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: EcommerceProduitBundle:Default:index }
+
+AjoutProduit:
+    pattern:  /ajout_produit 
+    defaults: { _controller: EcommerceProduitBundle:Produit:ajoutProduit }

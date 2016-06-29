@@ -143,9 +143,14 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // EcomProduitBundle_homepage
-        if (0 === strpos($pathinfo, '/produit/hello') && preg_match('#^/produit/hello/(?P<name>[^/]+?)$#x', $pathinfo, $matches)) {
-            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ecom\\ProduitBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'EcomProduitBundle_homepage'));
+        // EcommerceProduitBundle_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]+?)$#x', $pathinfo, $matches)) {
+            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'EcommerceProduitBundle_homepage'));
+        }
+
+        // AjoutProduit
+        if ($pathinfo === '/ajout_produit') {
+            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajoutProduitAction',  '_route' => 'AjoutProduit',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

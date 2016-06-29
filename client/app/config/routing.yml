@@ -1,6 +1,6 @@
-EcomProduitBundle:
-    resource: "@EcomProduitBundle/Resources/config/routing.php"
-    prefix:   /produit
+EcommerceProduitBundle:
+    resource: "@EcommerceProduitBundle/Resources/config/routing.yml"
+    prefix:   /
 
 # Internal routing configuration to handle ESI
 #_internal:

@@ -1,3 +1,0 @@
-HelloTheWorld:
-    path:     /
-    defaults: { _controller: IabsisVideothequeBundle:Blog:index }
