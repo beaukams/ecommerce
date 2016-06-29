@@ -15,17 +15,17 @@ class ProduitController extends Controller
         
     }
 
-    public function ajoutProduitAction()
+    public function ajouteProduitAction()
     {
         return $this->render('EcommerceProduitBundle:Produit:ajoutProduit.html.twig', array());
         //return new Response("c'est kams");
     }
 
     public function modifieProduitAction(){
-
+    	
     }
 
     public function supprimeProduitAction(){
-    	
+
     }
 }

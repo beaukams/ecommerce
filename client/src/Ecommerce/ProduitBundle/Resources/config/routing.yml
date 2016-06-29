@@ -1,19 +1,21 @@
 DefaultProduit:
-    pattern:  /Produit
+    pattern:  /produit
     defaults: { _controller: EcommerceProduitBundle:Produit:index }
 
 AjouteProduit:
-    pattern:  /Produit/ajoute
-    defaults: { _controller: EcommerceProduitBundle:Produit:ajoutProduit }
+    pattern:  /produit/ajoute
+    defaults: { _controller: EcommerceProduitBundle:Produit:ajouteProduit }
 
 modifieProduit:
-    pattern:  /Produit/modifie 
+    pattern:  /produit/modifie 
     defaults: { _controller: EcommerceProduitBundle:Produit:modifieProduit }
 
 supprimeProduit:
-    pattern:  /Produit/supprime 
+    pattern:  /produit/supprime{id_prod} 
     defaults: { _controller: EcommerceProduitBundle:Produit:supprimeProduit }
+    requirements:
+      id_prod:  \d+
 
 listeProduit:
-    pattern:  /Produit/liste 
+    pattern:  /produit/liste 
     defaults: { _controller: EcommerceProduitBundle:Produit:listeProduit }

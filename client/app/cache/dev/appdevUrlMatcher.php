@@ -144,27 +144,27 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // DefaultProduit
-        if ($pathinfo === '/Produit') {
+        if ($pathinfo === '/produit') {
             return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::indexAction',  '_route' => 'DefaultProduit',);
         }
 
         // AjouteProduit
-        if ($pathinfo === '/Produit/ajoute') {
-            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajoutProduitAction',  '_route' => 'AjouteProduit',);
+        if ($pathinfo === '/produit/ajoute') {
+            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajouteProduitAction',  '_route' => 'AjouteProduit',);
         }
 
         // modifieProduit
-        if ($pathinfo === '/Produit/modifie') {
+        if ($pathinfo === '/produit/modifie') {
             return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::modifieProduitAction',  '_route' => 'modifieProduit',);
         }
 
         // supprimeProduit
-        if ($pathinfo === '/Produit/supprime') {
+        if ($pathinfo === '/produit/supprime') {
             return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::supprimeProduitAction',  '_route' => 'supprimeProduit',);
         }
 
         // listeProduit
-        if ($pathinfo === '/Produit/liste') {
+        if ($pathinfo === '/produit/liste') {
             return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::listeProduitAction',  '_route' => 'listeProduit',);
         }
 

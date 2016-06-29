@@ -163,26 +163,26 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
 
     private function getDefaultProduitRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit',  ),));
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/produit',  ),));
     }
 
     private function getAjouteProduitRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajoutProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit/ajoute',  ),));
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajouteProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/produit/ajoute',  ),));
     }
 
     private function getmodifieProduitRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::modifieProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit/modifie',  ),));
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::modifieProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/produit/modifie',  ),));
     }
 
     private function getsupprimeProduitRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::supprimeProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit/supprime',  ),));
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::supprimeProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/produit/supprime',  ),));
     }
 
     private function getlisteProduitRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::listeProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit/liste',  ),));
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::listeProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/produit/liste',  ),));
     }
 }
