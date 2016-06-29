@@ -1,0 +1,10 @@
+ecommerce_hotel:
+    resource: "@EcommerceHotelBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+
+
+
+
