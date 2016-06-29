@@ -143,6 +143,11 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // ecommerce_hotel_default_index
+        if (0 === strpos($pathinfo, '/hotel') && preg_match('#^/hotel/(?P<name>[^/]+?)$#x', $pathinfo, $matches)) {
+            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ecommerce\\HotelBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'ecommerce_hotel_default_index'));
+        }
+
         // DefaultProduit
         if ($pathinfo === '/produit') {
             return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::indexAction',  '_route' => 'DefaultProduit',);
@@ -159,8 +164,8 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // supprimeProduit
-        if ($pathinfo === '/produit/supprime') {
-            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::supprimeProduitAction',  '_route' => 'supprimeProduit',);
+        if (0 === strpos($pathinfo, '/produit/supprim') && preg_match('#^/produit/supprime(?P<id_prod>\\d+)$#x', $pathinfo, $matches)) {
+            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::supprimeProduitAction',)), array('_route' => 'supprimeProduit'));
         }
 
         // listeProduit

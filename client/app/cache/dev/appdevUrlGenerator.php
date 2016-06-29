@@ -33,6 +33,7 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_home' => true,
        '_configurator_step' => true,
        '_configurator_final' => true,
+       'ecommerce_hotel_default_index' => true,
        'DefaultProduit' => true,
        'AjouteProduit' => true,
        'modifieProduit' => true,
@@ -161,6 +162,11 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         return array(array (), array (  '_controller' => 'Sensio\\Bundle\\DistributionBundle\\Controller\\ConfiguratorController::finalAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/_configurator/final',  ),));
     }
 
+    private function getecommerce_hotel_default_indexRouteInfo()
+    {
+        return array(array (  0 => 'name',), array (  '_controller' => 'Ecommerce\\HotelBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'name',  ),  1 =>   array (    0 => 'text',    1 => '/hotel',  ),));
+    }
+
     private function getDefaultProduitRouteInfo()
     {
         return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/produit',  ),));
@@ -178,7 +184,7 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
 
     private function getsupprimeProduitRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::supprimeProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/produit/supprime',  ),));
+        return array(array (  0 => 'id_prod',), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::supprimeProduitAction',), array (  'id_prod' => '\\d+',), array (  0 =>   array (    0 => 'variable',    1 => 'e',    2 => '\\d+',    3 => 'id_prod',  ),  1 =>   array (    0 => 'text',    1 => '/produit/supprim',  ),));
     }
 
     private function getlisteProduitRouteInfo()
