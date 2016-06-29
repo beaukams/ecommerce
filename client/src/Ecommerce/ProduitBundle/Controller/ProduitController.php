@@ -17,7 +17,15 @@ class ProduitController extends Controller
 
     public function ajoutProduitAction()
     {
-        //return $this->render('EcommerceProduitBundle:Produit:index.html.twig', array('name' => $name));
-        return new Response("c'est kams");
+        return $this->render('EcommerceProduitBundle:Produit:ajoutProduit.html.twig', array());
+        //return new Response("c'est kams");
+    }
+
+    public function modifieProduitAction(){
+
+    }
+
+    public function supprimeProduitAction(){
+    	
     }
 }

@@ -33,8 +33,11 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_home' => true,
        '_configurator_step' => true,
        '_configurator_final' => true,
-       'EcommerceProduitBundle_homepage' => true,
-       'AjoutProduit' => true,
+       'DefaultProduit' => true,
+       'AjouteProduit' => true,
+       'modifieProduit' => true,
+       'supprimeProduit' => true,
+       'listeProduit' => true,
     );
 
     /**
@@ -158,13 +161,28 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         return array(array (), array (  '_controller' => 'Sensio\\Bundle\\DistributionBundle\\Controller\\ConfiguratorController::finalAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/_configurator/final',  ),));
     }
 
-    private function getEcommerceProduitBundle_homepageRouteInfo()
+    private function getDefaultProduitRouteInfo()
     {
-        return array(array (  0 => 'name',), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'name',  ),  1 =>   array (    0 => 'text',    1 => '/hello',  ),));
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit',  ),));
     }
 
-    private function getAjoutProduitRouteInfo()
+    private function getAjouteProduitRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajoutProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/ajout_produit',  ),));
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajoutProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit/ajoute',  ),));
+    }
+
+    private function getmodifieProduitRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::modifieProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit/modifie',  ),));
+    }
+
+    private function getsupprimeProduitRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::supprimeProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit/supprime',  ),));
+    }
+
+    private function getlisteProduitRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::listeProduitAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/Produit/liste',  ),));
     }
 }

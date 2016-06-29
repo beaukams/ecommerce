@@ -143,14 +143,29 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // EcommerceProduitBundle_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]+?)$#x', $pathinfo, $matches)) {
-            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'EcommerceProduitBundle_homepage'));
+        // DefaultProduit
+        if ($pathinfo === '/Produit') {
+            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::indexAction',  '_route' => 'DefaultProduit',);
         }
 
-        // AjoutProduit
-        if ($pathinfo === '/ajout_produit') {
-            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajoutProduitAction',  '_route' => 'AjoutProduit',);
+        // AjouteProduit
+        if ($pathinfo === '/Produit/ajoute') {
+            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::ajoutProduitAction',  '_route' => 'AjouteProduit',);
+        }
+
+        // modifieProduit
+        if ($pathinfo === '/Produit/modifie') {
+            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::modifieProduitAction',  '_route' => 'modifieProduit',);
+        }
+
+        // supprimeProduit
+        if ($pathinfo === '/Produit/supprime') {
+            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::supprimeProduitAction',  '_route' => 'supprimeProduit',);
+        }
+
+        // listeProduit
+        if ($pathinfo === '/Produit/liste') {
+            return array (  '_controller' => 'Ecommerce\\ProduitBundle\\Controller\\ProduitController::listeProduitAction',  '_route' => 'listeProduit',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

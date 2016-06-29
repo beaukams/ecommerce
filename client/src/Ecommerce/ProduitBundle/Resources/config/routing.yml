@@ -1,7 +1,19 @@
-EcommerceProduitBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: EcommerceProduitBundle:Default:index }
+DefaultProduit:
+    pattern:  /Produit
+    defaults: { _controller: EcommerceProduitBundle:Produit:index }
 
-AjoutProduit:
-    pattern:  /ajout_produit 
+AjouteProduit:
+    pattern:  /Produit/ajoute
     defaults: { _controller: EcommerceProduitBundle:Produit:ajoutProduit }
+
+modifieProduit:
+    pattern:  /Produit/modifie 
+    defaults: { _controller: EcommerceProduitBundle:Produit:modifieProduit }
+
+supprimeProduit:
+    pattern:  /Produit/supprime 
+    defaults: { _controller: EcommerceProduitBundle:Produit:supprimeProduit }
+
+listeProduit:
+    pattern:  /Produit/liste 
+    defaults: { _controller: EcommerceProduitBundle:Produit:listeProduit }
