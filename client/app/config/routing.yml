@@ -1,3 +1,8 @@
+HotelBundle:
+    resource: "@HotelBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 EcommerceProduitBundle:
     resource: "@EcommerceProduitBundle/Resources/config/routing.yml"
     prefix:   /
