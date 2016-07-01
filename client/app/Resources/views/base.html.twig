@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        {% block head %}
+            {% block meta %}<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />{% endblock %}
+            <title>{% block title %}E-commerce{% endblock %}</title>
+            {% block stylesheets %}
+                <link href="{{ asset('bundles/Ecommerce/css/style.css') }}" rel="stylesheet">
+            {% endblock %}
+            <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        {% endblock %}
     </head>
+
     <body>
+        <header>
+            {% block header %}
+                {% include "::header.html.twig" %}
+            {% endblock %}
+        </header>
+
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        <footer>
+            {% block footer %}
+                {% include "::footer.html.twig" %}
+            {% endblock %}
+        </footer>
+        
+
+        {% block javascripts %}
+            <script src="{{ asset('bundles/Ecommerce/js/jquery-1.4.1.min.js') }}"></script>
+            <script src="{{ asset('bundles/Ecommerce/js/jquery.jcarousel.pack.js') }}"></script>
+            <script src="{{ asset('bundles/Ecommerce/js/jquery.slide.js') }}"></script>
+            <script src="{{ asset('bundles/Ecommerce/js/jquery-func.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Bienvenue sur ma première page avec le Site du Zéro
-		!</title>
-	</head>
-	<body>
-		<h1>Hello World !</h1>
-		<form>
-		
-		</form>
-	</body>
-</html>
+{% extends "EcommerceProduitBundle::base.html.twig" %}
+{% block body %}
+	<form method="POST">
+		<input type="text" name="nom_produit"><br/>
+		<input type="text" name="dep_production"><br/>
+		<input type="number" name="prix_produit"><br/>
+		<input type="text" name="contacts">
+		<input type="text" name="details_produit">
+		<input type="submit" value="valider">
+	</form>
+{%endblock%}
