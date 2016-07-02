@@ -42,6 +42,19 @@ class Commande
      */
     private $reussie;
 
+    /**
+     * @var integer $id_client
+     *
+     * @ORM\Column(name="id_client", type="integer")
+     */
+    private $id_client;
+
+    /**
+     * @var float $prix_commande
+     *
+     * @ORM\Column(name="prix_commande", type="float")
+     */
+    private $prix_commande;
 
     /**
      * Get id
@@ -111,5 +124,45 @@ class Commande
     public function getReussie()
     {
         return $this->reussie;
+    }
+
+    /**
+     * Get id_client
+     *
+     * @return integer 
+     */
+    public function getIdClient()
+    {
+        return $this->id_client;
+    }
+
+    /**
+     * Set id_client
+     *
+     * @param integer $idClient
+     */
+    public function setIdClient($idClient)
+    {
+        $this->id_client = $idClient;
+    }
+
+    /**
+     * Set prix_commande
+     *
+     * @param float $prixCommande
+     */
+    public function setPrixCommande($prixCommande)
+    {
+        $this->prix_commande = $prixCommande;
+    }
+
+    /**
+     * Get prix_commande
+     *
+     * @return float 
+     */
+    public function getPrixCommande()
+    {
+        return $this->prix_commande;
     }
 }

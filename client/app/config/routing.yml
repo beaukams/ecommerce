@@ -1,11 +1,11 @@
 HotelBundle:
     resource: "@HotelBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /hotel
 
 EcommerceProduitBundle:
     resource: "@EcommerceProduitBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /produit
 
 # Internal routing configuration to handle ESI
 #_internal:

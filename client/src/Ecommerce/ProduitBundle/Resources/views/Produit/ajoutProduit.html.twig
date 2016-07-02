@@ -1,11 +1,13 @@
 {% extends "EcommerceProduitBundle::base.html.twig" %}
 {% block body %}
-	<form method="POST">
-		<input type="text" name="nom_produit"><br/>
-		<input type="text" name="dep_production"><br/>
-		<input type="number" name="prix_produit"><br/>
-		<input type="text" name="contacts">
-		<input type="text" name="details_produit">
+	<form method="POST" action="{{ path('ajouteProduit') }}">
+		<input type="text" name="nom"><br/>
+		<input type="text" name="departement"><br/>
+		<input type="number" name="prix"><br/>
+		<input type="text" name="typeproduit"><br/>
+		<input type="text" name="details"><br>
+		<input type="text" name="photo"><br>
+		<input type="text" name="contacts"><br>
 		<input type="submit" value="valider">
 	</form>
 {% endblock %}

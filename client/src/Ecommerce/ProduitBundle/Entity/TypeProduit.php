@@ -13,13 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
 class TypeProduit
 {
     /**
-     * @var integer $id
+     * @var integer $id_typeproduit
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id_typeproduit", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    private $id_typeproduit;
 
     /**
      * @var string $libelle
@@ -41,9 +41,9 @@ class TypeProduit
      *
      * @return integer 
      */
-    public function getId()
+    public function getIdTypeproduit()
     {
-        return $this->id;
+        return $this->id_typeproduit;
     }
 
     /**

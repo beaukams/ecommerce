@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Produit
 {
     /**
-     * @var integer $id
+     * @var integer $id_produit
      *
      * @ORM\Column(name="id_produit", type="integer")
      * @ORM\Id
@@ -63,11 +63,8 @@ class Produit
      */
     private $id_departement;
 
-    public function __construct($nom_produit, $prix_unitaire, $details_produit, $photo_produit){
-        $this->nom_produit = $nom_produit;
-        $this->details_produit = $details_produit;
-        $this->prix_unitaire = $prix_unitaire;
-        $this->photo_produit = $photo_produit;
+    public function __construct(){
+        
     }
 
     /**
