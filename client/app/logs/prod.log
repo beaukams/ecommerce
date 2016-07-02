@@ -1,1 +1,0 @@
-[2016-06-29 18:03:30] request.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /ajoutProduit" (uncaught exception) at /home/abdoulaye/workspace/projets/e_commerce/client/vendor/symfony/src/Symfony/Bundle/FrameworkBundle/EventListener/RouterListener.php line 88 [] []
