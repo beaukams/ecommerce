@@ -4,6 +4,8 @@ namespace Ecommerce\ProduitBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * Ecommerce\ProduitBundle\Entity\Produit
  *
@@ -39,6 +41,7 @@ class Produit
      * @var float $prix_unitaire
      *
      * @ORM\Column(name="prix_unitaire", type="float")
+     * @Assert\Min(0.0)
      */
     private $prix_unitaire;
 
@@ -58,7 +61,7 @@ class Produit
 
     /**
      * @var integer $id_departement
-     *
+     * @Assert\Min(0)
      * @ORM\Column(name="id_departement", type="integer")   
      */
     private $id_departement;

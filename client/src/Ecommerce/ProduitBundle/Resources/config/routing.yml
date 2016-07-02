@@ -17,8 +17,8 @@ supprimeProduit:
       id:  \d+
 
 voirProduit:
-    pattern:  /details{id} 
-    defaults: { _controller: EcommerceProduitBundle:Produit:detailsProduit }
+    pattern:  /voir{id} 
+    defaults: { _controller: EcommerceProduitBundle:Produit:voirProduit }
     requirements:
       id:  \d+
 
