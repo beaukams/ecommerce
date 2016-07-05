@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Ecommerce\ProduitBundle\EcommerceProduitBundle(),
             new Ecommerce\HotelBundle\HotelBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Ecommerce\UserBundle\EcommerceUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

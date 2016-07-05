@@ -1,0 +1,6 @@
+{
+	"require": {
+		"friendsofsymfony/user-bundle": "*"
+	}
+
+}

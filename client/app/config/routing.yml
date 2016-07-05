@@ -1,3 +1,8 @@
+EcommerceUserBundle:
+    resource: "@EcommerceUserBundle/Controller/"
+    type:     annotation
+    prefix:   /user
+
 HotelBundle:
     resource: "@HotelBundle/Controller/"
     type:     annotation

@@ -59,3 +59,8 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+fos_user:
+    db_driver: orm # Le type de BDD à utiliser, nous utilisons l'ORM Doctrine depuis
+    firewall_name: main # Le nom du firewall duquel on utilisera ces utilisateurs 
+    user_class: Ecommerce\UserBundle\Entity\User # La classe de l'entité User que nous venons de définir
