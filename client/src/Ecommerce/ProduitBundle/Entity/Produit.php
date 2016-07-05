@@ -61,7 +61,7 @@ class Produit
 
     /**
      * @var integer $id_departement
-     * @Assert\Min(0)
+     * 
      * @ORM\Column(name="id_departement", type="integer")   
      */
     private $id_departement;
@@ -198,5 +198,16 @@ class Produit
     public function getIdDepartement()
     {
         return $this->id_departement;
+    }
+
+    public function getContenu(){
+        return array(
+                "id_produit" => $this->id_produit,
+                "nom_produit" => $this->nom_produit,
+                "prix_unitaire" => $this->prix_unitaire,
+                "id_departement" => $this->id_departement,
+                "id_typeproduit" => $this->id_typeproduit,
+                "details_produit" => $this->details_produit
+            );
     }
 }

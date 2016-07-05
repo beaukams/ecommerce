@@ -4,6 +4,7 @@ namespace Ecommerce\ProduitBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use ymfony\Component\HttpFoundation\Session;
 
 //ajouter l'entite produit
 use Ecommerce\ProduitBundle\Entity\Produit;
@@ -26,64 +27,128 @@ class ProduitController extends Controller
 
     	//on crée un objet produit
     	$produit = new Produit();
+        
     		
-    	//on génere la formulaire
-    	$form = $this->createForm(new ProduitType(), $produit);
+        $form = $this->createForm(new ProduitType, $produit);
+         /*           ->add('nom_produit', 'text', array('required' => true))
+                    ->add('details_produit', 'text')
+                    ->add('prix_unitaire', 'number', array('required' => true))
+                    ->add('photo_produit', 'text')
+                    ->add('id_typeproduit', 'choice', array('choices' => array(1 => 'kams', 2 => 'moustapha')))
+                    ->add('id_departement', 'choice', array('choices' => array(1 => 'kams', 2 => 'moustapha')))
+                    ->getForm();*/
 
-    	if($this->get("request")->getMethod() == "POST"){
+        if($this->get('request')->getMethod() == "POST"){
+            
+                $request = $this->get('request');
 
-    		$request = $this->get("request");
-    	/*	$nom = $request->request->get('nom');
-    		$prix = $request->request->get('prix');
-    		$photo = $request->request->get('photo');
-    		$details = $request->request->get('details');
-    		$id_departement = $request->request->get('departement');
-    		$id_typeproduit = $request->request->get('typeproduit');*/
+                //lier le formulaire à la requete
+                $form->bindRequest($request);
 
-    		//on lie le formulaire à la requete
-    		$form->bind($request);
+                if($form->isValid()){
+                    
+                    $this->reqAddProduit($produit);
 
-    		//verifier si les valeurs sont bonnes
-    		if($form->isValid()){
+                    //visulaiser le resultat
+                    return $this->redirect($this->generateUrl('voirProduit', array('id' => $produit->getIdProduit())));
+                }else{
+                    $this->render("EcommerceProduitBundle:Produit:ajoutProduit.html.twig", array('form' => $form->createView(), ));
+                }
 
-    			//ajouter le produit à la base
-	    		$produit = $this->reqAddProduit($produit);
+        }else{
 
-	    		//session temporaire
-	    		$this->get('session')->setFlash('notice', 'Produit bien enregistré');
-
-	    		//on visualise le résultat
-	    		return $this->redirect( $this->generateUrl('voirProduit', array('id' => $produit->getIdProduit())) );
-    		}else{
-
-    			//création de la vue et affichage
-
-	        	return $this->render('EcommerceProduitBundle:Produit:ajoutProduit.html.twig', 
-	        		array(
-	        			'form' => $form->createView(),
-	        			));
-	    		}
-
-    	}else{
-
-    		//création de la vue et affichage
-        	return $this->render('EcommerceProduitBundle:Produit:ajoutProduit.html.twig', 
-        		array(
-        			'form' => $form->createView(),
-        			));
-    	}
+    	   return $this->render("EcommerceProduitBundle:Produit:ajoutProduit.html.twig", array('form' => $form->createView(), ));
+        }
     }
 
-    public function voirProduit($id){
-    	//recuperer le produit dans la base
+    public function voirProduitAction($id){
+    	
+        if($id >= 0){
+            //on recupere le produit
+            $produit = $this->reqSelectProduit($id);
+            if($produit === null){
+                return $this->render("EcommerceProduitBundle:Produit:errorProduitInexistant.html.twig");
+            }else{
+
+                //on affiche
+                return $this->render("EcommerceProduitBundle:Produit:voirProduit.html.twig", array('produit' => $produit->getContenu()));
+            }
+        }
+        else{
+            return $this->render("EcommerceProduitBundle:Produit:listeProduit.html.twig");
+        }
     }
+
+    public function listeProduitAction(){
+
+            //on recupere le produit
+            $produits = $this->reqSelectAllProduit();
+
+            if($produits === null){
+                return $this->render("EcommerceProduitBundle:Produit:errorProduitInexistant.html.twig");
+            }else{
+
+                //on affiche
+                $res = array();
+                foreach ($produits as $key => $produit) {
+                    $res[$key] = $produit->getContenu();
+                }
+
+                return $this->render("EcommerceProduitBundle:Produit:listeProduit.html.twig", array('produits' => $res ));
+            }
+    }
+
 
     public function modifieProduitAction($id){
-    	
+
+        //on crée un objet produit
+        $produit = $this->reqSelectProduit($id);
+
+        
+        $form = $this->createForm(new ProduitType, $produit);
+
+        if($this->get('request')->getMethod() == "POST"){
+                
+
+                $request = $this->get('request');
+
+                //lier le formulaire à la requete
+                $form->bindRequest($request);
+
+                if($form->isValid()){
+                    
+                    //$produit->setIdProduit($id);
+                    $this->reqUpdateProduit($produit);
+
+                    //visulaiser le resultat
+                    return $this->redirect($this->generateUrl('voirProduit', array('id' => $produit->getIdProduit())));
+                }else{
+
+                    //ajouter le produit
+                    return $this->redirect($this->generateUrl('ajouteProduit'));
+                }
+
+        }elseif($produit != null){
+
+           return $this->render("EcommerceProduitBundle:Produit:modifieProduit.html.twig", array('form' => $form->createView(), 'id' => $id ));
+
+        }else{
+            return $this->redirect($this->generateUrl('listeProduit'));
+        }
     }
 
-    public function supprimeProduitAction(){
 
+    public function supprimeProduitAction($id){
+
+        if(intval($id) >= 0){
+            //on supprime le produit
+            $this->reqRemoveProduitById($id);
+           
+            return $this->redirect($this->generateUrl('listeProduit'));
+        }
+        else{
+            return $this->redirect($this->generateUrl('listeProduit'));
+        }
     }
 
     private function reqAddProduitParam($nom, $prix, $details, $photo, $id_departement, $id_typeproduit){
@@ -97,8 +162,7 @@ class ProduitController extends Controller
         $produit->setIdTypeproduit($id_typeproduit);
         $produit->setPhotoProduit($photo);
 
-
-        return $this->reqAddProduit();
+        $this->reqAddProduit();
     }
 
     private function reqAddProduit($produit){
@@ -112,7 +176,80 @@ class ProduitController extends Controller
         //flush
         $em->flush();
 
+    }
+
+    private function reqSelectProduit($id_produit){
+
+        //on recupere le manager
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $produit = $em->getRepository('EcommerceProduitBundle:Produit')->find($id_produit);
+
+        //flush
+        $em->flush();
 
         return $produit;
+
+    }
+
+    private function reqSelectAllProduit(){
+
+        //on recupere le manager
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $produits = $em->getRepository('EcommerceProduitBundle:Produit')->findAll();
+
+        //flush
+        $em->flush();
+
+        return $produits;
+
+    }
+
+    private function reqUpdateProduit(Produit $produit){
+
+        //on recupere le manager
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $em->persist($produit);
+
+        //flush
+        $em->flush();
+
+    }
+
+    private function reqUpdateProduitById($id_produit){
+
+        //recupere le produit
+        $produit = $this->reqSelectProduit($id_produit);
+
+        //mise a jour
+        $this->reqUpdateProduit($produit);
+
+        return $produit;
+
+    }
+
+
+    private function reqRemoveProduit($produit){
+
+        //on recupere le manager
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $em->remove($produit);
+
+        //flush
+        $em->flush();
+
+    }
+
+    private function reqRemoveProduitById($id_produit){
+
+        //recupere le produit
+        $produit = $this->reqSelectProduit($id_produit);
+
+        //suppression
+        $this->reqRemoveProduit($produit);
+
     }
 }

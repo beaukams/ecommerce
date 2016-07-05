@@ -4,18 +4,20 @@ namespace Ecommerce\ProduitBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class ProduitType extends AbstractType
 {
     public function buildForm(FormBuilder $builder, array $options)
     {
         $builder
-            ->add('nom_produit', 'text', array('required' => true, ))
+            ->add('nom_produit', 'text', array('required' => true))
             ->add('details_produit', 'text')
-            ->add('prix_unitaire', 'number', array('required' => true, ))
+            ->add('prix_unitaire', 'number', array('required' => true))
             ->add('photo_produit', 'text')
-            ->add('id_typeproduit', 'choice', array('choices' => array('1' => 'kams', '2' => 'moustapha')))
-            ->add('id_departement', 'choice')
+            ->add('id_typeproduit', 'choice', array('choices' => array(1 => 'kams', 2 => 'moustapha')))
+            ->add('id_departement', 'choice', array('choices' => array(1 => 'kams', 2 => 'moustapha')))
+           // ->getForm()
         ;
     }
 

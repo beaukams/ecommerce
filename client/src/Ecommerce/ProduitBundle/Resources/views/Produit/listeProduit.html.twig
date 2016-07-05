@@ -1,0 +1,13 @@
+{% extends "EcommerceProduitBundle::base.html.twig" %}
+{% block body %}
+	<div>
+		{% for produit in produits %}
+			<label>Iden: <div>{{ produit.id_produit }}</div></label><br>
+			<label>Produit: <div>{{ produit.nom_produit }}</div></label><br>
+			<label>Prix unitaire:<div>{{ produit.prix_unitaire }}</div></label><br>
+			<label>Details :<div>{{ produit.details_produit }}</div></label><br>
+			<label>Catégorie : <div>{{ produit.id_typeproduit }}</div></label><br>
+			<label>Departement : <div>{{ produit.id_departement }}</div></label><br>
+		{% endfor %}
+	</div>
+{% endblock %}

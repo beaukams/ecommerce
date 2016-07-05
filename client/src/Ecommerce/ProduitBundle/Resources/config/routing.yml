@@ -7,17 +7,19 @@ ajouteProduit:
     defaults: { _controller: EcommerceProduitBundle:Produit:ajouteProduit }
 
 modifieProduit:
-    pattern:  /modifie 
+    pattern:  /modifie/{id}
     defaults: { _controller: EcommerceProduitBundle:Produit:modifieProduit }
+    requirements:
+      id:  \d+
 
 supprimeProduit:
-    pattern:  /supprime{id} 
+    pattern:  /supprime/{id} 
     defaults: { _controller: EcommerceProduitBundle:Produit:supprimeProduit }
     requirements:
       id:  \d+
 
 voirProduit:
-    pattern:  /voir{id} 
+    pattern:  /voir/{id} 
     defaults: { _controller: EcommerceProduitBundle:Produit:voirProduit }
     requirements:
       id:  \d+
