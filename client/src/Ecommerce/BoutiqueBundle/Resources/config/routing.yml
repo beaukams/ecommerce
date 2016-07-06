@@ -1,0 +1,58 @@
+ecommerce_boutique_homepage:
+    path:     /
+    defaults: { _controller: EcommerceBoutiqueBundle:Default:index }
+
+ajouteProduit:
+    pattern:  /produit/ajoute
+    defaults: { _controller: EcommerceBoutiqueBundle:Produit:ajouteProduit }
+
+modifieProduit:
+    pattern:  /produit/modifie/{id}
+    defaults: { _controller: EcommerceBoutiqueBundle:Produit:modifieProduit }
+    requirements:
+      id:  \d+
+
+supprimeProduit:
+    pattern:  /produit/supprime/{id} 
+    defaults: { _controller: EcommerceBoutiqueBundle:Produit:supprimeProduit }
+    requirements:
+      id:  \d+
+
+voirProduit:
+    pattern:  /produit/voir/{id} 
+    defaults: { _controller: EcommerceBoutiqueBundle:Produit:voirProduit }
+    requirements:
+      id:  \d+
+
+listeProduit:
+    pattern:  /produit/liste 
+    defaults: { _controller: EcommerceBoutiqueBundle:Produit:listeProduit }
+
+
+
+#les commandes
+ajouteCommande:
+    pattern:  /commande/ajoute
+    defaults: { _controller: EcommerceBoutiqueBundle:Commande:ajouteCommande }
+
+modifieCommande:
+    pattern:  /commande/modifie/{id}
+    defaults: { _controller: EcommerceBoutiqueBundle:Commande:modifieCommande }
+    requirements:
+      id:  \d+
+
+supprimeCommande:
+    pattern:  /commande/supprime/{id} 
+    defaults: { _controller: EcommerceBoutiqueBundle:Commande:supprimeCommande }
+    requirements:
+      id:  \d+
+
+voirCommande:
+    pattern:  /commande/voir/{id} 
+    defaults: { _controller: EcommerceBoutiqueBundle:Commande:voirCommande }
+    requirements:
+      id:  \d+
+
+listeCommande:
+    pattern:  /Commande/liste 
+    defaults: { _controller: EcommerceBoutiqueBundle:Commande:listeCommande }

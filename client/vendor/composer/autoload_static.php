@@ -4,16 +4,20 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit9a420b7e5017853537f0df6b421e272f
+class ComposerStaticInite0d6c3b17ad60f8cc8f6724264591ec7
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
-        'edc6464955a37aa4d5fbf39d40fb6ee7' => __DIR__ . '/..' . '/symfony/polyfill-php55/bootstrap.php',
-        '3e2471375464aac821502deb0ac64275' => __DIR__ . '/..' . '/symfony/polyfill-php54/bootstrap.php',
+        '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
+        'edc6464955a37aa4d5fbf39d40fb6ee7' => __DIR__ . '/..' . '/symfony/polyfill-php55/bootstrap.php',
+        '3e2471375464aac821502deb0ac64275' => __DIR__ . '/..' . '/symfony/polyfill-php54/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
+        '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -25,30 +29,34 @@ class ComposerStaticInit9a420b7e5017853537f0df6b421e272f
             'Symfony\\Polyfill\\Php55\\' => 23,
             'Symfony\\Polyfill\\Php54\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Component\\Translation\\' => 30,
-            'Symfony\\Component\\Templating\\' => 29,
-            'Symfony\\Component\\Stopwatch\\' => 28,
             'Symfony\\Component\\Security\\Acl\\' => 31,
-            'Symfony\\Component\\Security\\' => 27,
-            'Symfony\\Component\\Routing\\' => 26,
-            'Symfony\\Component\\PropertyAccess\\' => 33,
-            'Symfony\\Component\\Inflector\\' => 28,
-            'Symfony\\Component\\HttpKernel\\' => 29,
-            'Symfony\\Component\\HttpFoundation\\' => 33,
-            'Symfony\\Component\\Finder\\' => 25,
-            'Symfony\\Component\\Filesystem\\' => 29,
-            'Symfony\\Component\\EventDispatcher\\' => 34,
-            'Symfony\\Component\\DependencyInjection\\' => 38,
-            'Symfony\\Component\\Debug\\' => 24,
-            'Symfony\\Component\\Config\\' => 25,
-            'Symfony\\Component\\ClassLoader\\' => 30,
-            'Symfony\\Component\\Asset\\' => 24,
-            'Symfony\\Bundle\\SecurityBundle\\' => 30,
-            'Symfony\\Bundle\\FrameworkBundle\\' => 31,
+            'Symfony\\Component\\' => 18,
+            'Symfony\\Bundle\\SwiftmailerBundle\\' => 33,
+            'Symfony\\Bundle\\MonologBundle\\' => 29,
+            'Symfony\\Bundle\\' => 15,
+            'Symfony\\Bridge\\Twig\\' => 20,
+            'Symfony\\Bridge\\Swiftmailer\\' => 27,
+            'Symfony\\Bridge\\ProxyManager\\' => 28,
+            'Symfony\\Bridge\\PhpUnit\\' => 23,
+            'Symfony\\Bridge\\Monolog\\' => 23,
+            'Symfony\\Bridge\\Doctrine\\' => 24,
+            'Sensio\\Bundle\\GeneratorBundle\\' => 30,
+            'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
+            'Sensio\\Bundle\\DistributionBundle\\' => 33,
+        ),
+        'M' => 
+        array (
+            'Monolog\\' => 8,
+        ),
+        'I' => 
+        array (
+            'Incenteev\\ParameterHandler\\' => 27,
         ),
         'D' => 
         array (
             'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
+            'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
     );
 
@@ -77,93 +85,103 @@ class ComposerStaticInit9a420b7e5017853537f0df6b421e272f
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Component\\Translation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/translation',
-        ),
-        'Symfony\\Component\\Templating\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/templating',
-        ),
-        'Symfony\\Component\\Stopwatch\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/stopwatch',
-        ),
         'Symfony\\Component\\Security\\Acl\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/security-acl',
         ),
-        'Symfony\\Component\\Security\\' => 
+        'Symfony\\Component\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/security',
+            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component',
         ),
-        'Symfony\\Component\\Routing\\' => 
+        'Symfony\\Bundle\\SwiftmailerBundle\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/routing',
+            0 => __DIR__ . '/..' . '/symfony/swiftmailer-bundle',
         ),
-        'Symfony\\Component\\PropertyAccess\\' => 
+        'Symfony\\Bundle\\MonologBundle\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/property-access',
+            0 => __DIR__ . '/..' . '/symfony/monolog-bundle',
         ),
-        'Symfony\\Component\\Inflector\\' => 
+        'Symfony\\Bundle\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/inflector',
+            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bundle',
         ),
-        'Symfony\\Component\\HttpKernel\\' => 
+        'Symfony\\Bridge\\Twig\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/http-kernel',
+            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Twig',
         ),
-        'Symfony\\Component\\HttpFoundation\\' => 
+        'Symfony\\Bridge\\Swiftmailer\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/http-foundation',
+            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Swiftmailer',
         ),
-        'Symfony\\Component\\Finder\\' => 
+        'Symfony\\Bridge\\ProxyManager\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/finder',
+            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/ProxyManager',
         ),
-        'Symfony\\Component\\Filesystem\\' => 
+        'Symfony\\Bridge\\PhpUnit\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/filesystem',
+            0 => __DIR__ . '/..' . '/symfony/phpunit-bridge',
         ),
-        'Symfony\\Component\\EventDispatcher\\' => 
+        'Symfony\\Bridge\\Monolog\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Monolog',
         ),
-        'Symfony\\Component\\DependencyInjection\\' => 
+        'Symfony\\Bridge\\Doctrine\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/dependency-injection',
+            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Doctrine',
         ),
-        'Symfony\\Component\\Debug\\' => 
+        'Sensio\\Bundle\\GeneratorBundle\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/debug',
+            0 => __DIR__ . '/..' . '/sensio/generator-bundle',
         ),
-        'Symfony\\Component\\Config\\' => 
+        'Sensio\\Bundle\\FrameworkExtraBundle\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/config',
+            0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle',
         ),
-        'Symfony\\Component\\ClassLoader\\' => 
+        'Sensio\\Bundle\\DistributionBundle\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/class-loader',
+            0 => __DIR__ . '/..' . '/sensio/distribution-bundle',
         ),
-        'Symfony\\Component\\Asset\\' => 
+        'Monolog\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/asset',
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
-        'Symfony\\Bundle\\SecurityBundle\\' => 
+        'Incenteev\\ParameterHandler\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/security-bundle',
-        ),
-        'Symfony\\Bundle\\FrameworkBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/framework-bundle',
+            0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
         ),
+        'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/doctrine-cache-bundle',
+        ),
+        'Doctrine\\Bundle\\DoctrineBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
+        ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/src',
     );
 
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+        'S' => 
+        array (
+            'SensioLabs\\Security' => 
+            array (
+                0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
+            ),
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 
@@ -180,36 +198,64 @@ class ComposerStaticInit9a420b7e5017853537f0df6b421e272f
         ),
         'D' => 
         array (
+            'Doctrine\\ORM\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/orm/lib',
+            ),
+            'Doctrine\\DBAL\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/dbal/lib',
+            ),
             'Doctrine\\Common\\Lexer\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
+            ),
+            'Doctrine\\Common\\Inflector\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
+            ),
+            'Doctrine\\Common\\Collections\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
             'Doctrine\\Common\\Annotations\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
             ),
+            'Doctrine\\Common\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/common/lib',
+            ),
         ),
     );
 
     public static $classMap = array (
+        'AppCache' => __DIR__ . '/../..' . '/app/AppCache.php',
+        'AppKernel' => __DIR__ . '/../..' . '/app/AppKernel.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'CallbackFilterIterator' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/CallbackFilterIterator.php',
+        'Collator' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/Collator.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/IntlDateFormatter.php',
+        'Locale' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/Locale.php',
+        'NumberFormatter' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/NumberFormatter.php',
         'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
         'RecursiveCallbackFilterIterator' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/RecursiveCallbackFilterIterator.php',
         'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/SessionHandlerInterface.php',
+        'SqlFormatter' => __DIR__ . '/..' . '/jdorn/sql-formatter/lib/SqlFormatter.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit9a420b7e5017853537f0df6b421e272f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit9a420b7e5017853537f0df6b421e272f::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit9a420b7e5017853537f0df6b421e272f::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit9a420b7e5017853537f0df6b421e272f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite0d6c3b17ad60f8cc8f6724264591ec7::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite0d6c3b17ad60f8cc8f6724264591ec7::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInite0d6c3b17ad60f8cc8f6724264591ec7::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInite0d6c3b17ad60f8cc8f6724264591ec7::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInite0d6c3b17ad60f8cc8f6724264591ec7::$classMap;
 
         }, null, ClassLoader::class);
     }
