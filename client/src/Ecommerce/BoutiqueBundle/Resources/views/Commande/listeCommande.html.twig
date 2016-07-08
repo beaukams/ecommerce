@@ -1,0 +1,13 @@
+{% extends "EcommerceBoutiqueBundle::base.html.twig" %}
+{% block body %}
+	<div>
+		{% for commande in commandes %}
+			<label>Iden: <div>{{ commande.id_commande }}</div></label><br>
+			<label>commande: <div>{{ commande.nom_commande }}</div></label><br>
+			<label>Prix unitaire:<div>{{ commande.prix_unitaire }}</div></label><br>
+			<label>Details :<div>{{ commande.details_commande }}</div></label><br>
+			<label>Catégorie : <div>{{ commande.id_typecommande }}</div></label><br>
+			<label>Departement : <div>{{ commande.id_departement }}</div></label><br>
+		{% endfor %}
+	</div>
+{% endblock %}
