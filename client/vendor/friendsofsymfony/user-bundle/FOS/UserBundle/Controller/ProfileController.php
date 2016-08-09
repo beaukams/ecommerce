@@ -11,6 +11,7 @@
 
 namespace FOS\UserBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
@@ -24,8 +25,10 @@ use FOS\UserBundle\Model\UserInterface;
 class ProfileController extends ContainerAware
 {
     /**
-     * Show the user
-     */
+     * @Route("/", name="profil")
+     * 
+     */ 
+
     public function showAction()
     {
         $user = $this->container->get('security.context')->getToken()->getUser();
