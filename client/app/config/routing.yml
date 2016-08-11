@@ -11,6 +11,8 @@ HotelBundle:
     type:     annotation
     prefix:   /hotel
 
+
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

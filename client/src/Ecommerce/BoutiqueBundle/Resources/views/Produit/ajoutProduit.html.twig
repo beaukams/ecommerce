@@ -1,5 +1,8 @@
 {% extends "EcommerceBoutiqueBundle::base.html.twig" %}
-{% block body %}
+
+{% block barre_location %}{{ parent() }}<span>|</span>Nouveau Produit{% endblock %}
+
+{% block le_contenu %}
 	<form method="POST" action="{{ path('ajouteProduit') }} {{ form_enctype(form) }}">
 		{{ form_widget(form) }}
 		<input type='submit' value='Valider'/>

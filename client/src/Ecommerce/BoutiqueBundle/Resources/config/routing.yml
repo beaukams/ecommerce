@@ -1,3 +1,4 @@
+
 ecommerce_boutique_homepage:
     path:     /
     defaults: { _controller: EcommerceBoutiqueBundle:Default:index }

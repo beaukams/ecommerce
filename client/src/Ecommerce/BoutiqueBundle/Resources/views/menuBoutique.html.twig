@@ -1,0 +1,27 @@
+<ul class="nav navbar-nav nav_1">
+  <li><a href="{{ path('ecommerce_boutique_homepage') }}">Accueil Boutique</a></li>
+  <li class="dropdown mega-dropdown active">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produit<span class="caret"></span></a>        
+  <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+    <div class="w3ls_vegetables">
+      <ul>  
+        <li><a href="{{ path('ajouteProduit') }}">Ajouter</a></li>
+        <li><a href="{{ path('listeProduit') }}">Liste</a></li>
+      </ul>
+    </div>                  
+  </div>        
+  </li>
+  
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Commande<span class="caret"></span></a>
+  <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+    <div class="w3ls_vegetables">
+      <ul>
+        <li><a href="{{ path('ajouteCommande') }}">Nouveau</a></li>
+        <li><a href="{{ path('listeCommande') }}">Liste</a></li>
+      </ul>
+    </div>                  
+  </div>  
+  </li>
+  
+</ul>

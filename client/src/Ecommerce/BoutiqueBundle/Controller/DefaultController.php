@@ -10,6 +10,6 @@ class DefaultController extends Controller
 { 
     public function indexAction()
     {
-        return $this->render('EcommerceBoutiqueBundle:Default:index.html.twig');
+        return $this->render('EcommerceBoutiqueBundle::index.html.twig');
     }
 }

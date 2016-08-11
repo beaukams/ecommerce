@@ -18,7 +18,7 @@ class BoutiqueBundle extends Controller
     
     public function indexAction($name)
     {
-        return $this->render('EcommerceBoutiqueBundle:Produit:ajoutProduit.html.twig', array('name' => $name));
+        return $this->render('EcommerceBoutiqueBundle:index.html.twig');
         
     }
 

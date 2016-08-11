@@ -1,2 +1,9 @@
 {% extends "::base.html.twig" %}
-{% block title %}Produit: {{ parent() }} {% endblock %}
+{% block title %}Boutique:{{ parent() }} {% endblock %}
+
+{% block barre_location %}{{ parent() }}Boutique{% endblock %}
+
+{% block menu_nav %}
+  {% include "EcommerceBoutiqueBundle::menuBoutique.html.twig" %}
+{% endblock %}
+
