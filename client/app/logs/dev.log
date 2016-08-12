@@ -191,3 +191,6 @@
 [2016-08-12 00:06:10] request.INFO: Matched route "homepage". {"route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://127.0.0.1/Symphony/ProjetFinal/ecommerce/client/web/app_dev.php/"} []
 [2016-08-12 00:06:10] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2016-08-12 00:06:14] request.INFO: Matched route "_wdt". {"route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"8187e2","_route":"_wdt"},"request_uri":"http://127.0.0.1/Symphony/ProjetFinal/ecommerce/client/web/app_dev.php/_wdt/8187e2"} []
+[2016-08-13 00:51:30] request.INFO: Matched route "homepage". {"route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://localhost/Symphony/ProjetFinal/ecommerce/client/web/app_dev.php/"} []
+[2016-08-13 00:51:33] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-08-13 00:51:39] request.INFO: Matched route "_wdt". {"route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"6ac7ba","_route":"_wdt"},"request_uri":"http://localhost/Symphony/ProjetFinal/ecommerce/client/web/app_dev.php/_wdt/6ac7ba"} []
