@@ -3,6 +3,7 @@ ecommerce_boutique_homepage:
     path:     /
     defaults: { _controller: EcommerceBoutiqueBundle:Default:index }
 
+
 ajouteProduit:
     pattern:  /produit/ajoute
     defaults: { _controller: EcommerceBoutiqueBundle:Produit:ajouteProduit }
