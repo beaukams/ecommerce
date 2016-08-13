@@ -136,7 +136,7 @@ input[type="submit"],#PPMiniCart .minicart-submit,.w3ls_vegetables ul li a,input
 .w3l_header_right1 h2 a{
 	font-size: .74em;
     color: #fff;
-    padding: .5em 1.5em;
+    padding: .5em 0px;
     background: #FA1818;
     display: block;
 	text-decoration:none;
@@ -207,11 +207,16 @@ ul.dropdown-menu.drp-mnu li a i {
 .w3ls_logo_products_left1 ul.special_items li{
 	display:inline-block;
 }
-.w3ls_logo_products_left1 ul.special_items li a{
+.w3ls_logo_products_left1 ul.special_items li  a{ 
 	color:#212121;
 	font-family: 'Ubuntu', sans-serif;
 	text-decoration:none;
 }
+
+li.coul a:link {
+	background: blue;
+}
+
 .w3ls_logo_products_left1 ul.special_items li a:hover,.w3ls_logo_products_left1 ul.phone_email li a:hover{
 	color:#FA1818;
 }
@@ -280,23 +285,31 @@ ul.dropdown-menu.drp-mnu li a i {
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background-color: #84C639;
     border: none;
-}
+} 
+
 .w3ls_vegetables_menu {
-    left: 13%;
+    left: 0%;
     border: none;
     padding: 1em;
-}
+} 
+
 .w3ls_vegetables ul li {
     list-style-type: none;
 }
-.w3ls_vegetables ul li:first-child {
-    margin-bottom:.5em;
+
+.w3ls_vegetables ul li {
+	display: inline-block;
+	
 }
-.w3ls_vegetables ul li a {
+
+.w3ls_vegetables ul li a { 
+    
+	padding: 5px 10px;
     color: #212121;
 /*-- w3layouts --*/
     display: block;
-    text-decoration: none;
+    
+    
 }
 .w3ls_vegetables ul li a:hover{
 	color:#FA1818;
@@ -2974,6 +2987,7 @@ ul.wmuSliderPagination {
 	.w3l_search input[type="submit"] {
 		background: url(../images/img-sp.png) no-repeat 0px 5px #FA1818;
 		width: 18%;
+		padding-bottom: 30px;
 	}
 	.w3l_search input[type="submit"]:hover {
 		background: url(../images/img-sp.png) no-repeat 0px 5px #84C639;
@@ -2993,7 +3007,7 @@ ul.wmuSliderPagination {
 	}
 	.w3l_header_right1 h2 a {
 		font-size: .6em;
-		padding:.75em 1em;
+		padding:.75em 0px;
 	}
 	.w3ls_logo_products_left h1 a {
 		font-size: 1em;
@@ -3166,7 +3180,7 @@ ul.wmuSliderPagination {
 		width: 45%;
 	}
 }
-@media (max-width: 767px){
+@media (max-width: 7px){
 	.w3l_banner_nav_left {
 		float: none;
 		width: 100%;
