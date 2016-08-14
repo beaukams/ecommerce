@@ -1,7 +1,6 @@
 /*--
 Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
+Author URL: http://w3layouts.coLicense: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 html, body{
@@ -18,7 +17,96 @@ p{
 h1,h2,h3,h4,h5,h6,a{
 	font-family:'Ubuntu', sans-serif !important;
 	margin:0;
-} 
+}  
+
+.top-brands{
+	margin-bottom: 30px;
+}
+
+.forn{
+	margin-top:10px;
+	height: 200px;
+	width: 920px;
+	border-top: 1px solid background black;
+	border-left: 1px solid background black;
+	background: #ddd;
+}
+
+
+
+
+
+
+/* style du bloc ul */
+.menu-vertical {
+  width: 250px; /* optionnel, c'est pour la démo */
+  list-style: none; /* supprime les puces de liste */
+  padding: 4px; /* on fait un peu de place autour des liens */
+  margin: 0; /* on annule les marges */
+  background: #F2F2F2;
+  margin-left: 1070px;
+}
+ 
+/* styles des liens et éléments de liste */
+.mv-item,
+.mv-item a {
+  /* les liens et item deviennent des blocs */
+  /* suffit théoriquement à virer les puces de liste */
+  display: block;
+}
+ 
+/* styles des liens */
+.mv-item a {
+  margin: 3px 0; /* espace les liens d'1 px */
+  padding: 8px 20px; /* marges internes pour aérer */ 
+  color: #666;
+  background: #FFF;
+  text-decoration: none; /* on vire le soulignement */
+
+  /* on définit la transition pour les navigateurs */
+  -webkit-transition: all .3s; /* Chrome/Safari */
+  -moz-transition: all .3s; /* Firefox (plus trop nécessaire) */
+  transition: all .3s; /* syntaxe officielle */
+}
+ 
+/* styles changeants au survol et focus */
+.mv-item a:hover,
+.mv-item a:focus {
+  background: #1ABC9C;
+  color: #FFF;
+  padding-left: 30px; /* décalage du contenu de 10px vers la droite (30-20 = 10) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-brandes{ 
+
+	padding: 3em 0 !important;
+	background: #f5f5f5;
+	display: block;
+}
 
 .forme{
 	margin-left: 250px;
@@ -546,7 +634,7 @@ li.coul a:link {
 	margin:3em 0 0;
 }
 .top-brands{
-    background: #f5f5f5;
+    background: white;
 }
 .agile_top_brand_left_grid1 p{
 	color:#212121;
