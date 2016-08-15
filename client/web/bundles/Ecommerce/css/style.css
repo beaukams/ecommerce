@@ -23,7 +23,27 @@ h1,h2,h3,h4,h5,h6,a{
 	margin-bottom: 30px;
 }
 
+.cont{
+	height: 200px;
+	width: 200px;
+	background: blue;
+}
 
+.fleche_gauche, .forn { 
+display: inline-block;
+vertical-align: top;
+
+}
+
+.fleche_gauche {
+	margin-top: 10px;
+    width: 0px; 
+    height: 0px; 
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent; 
+    margin-left: 122px; 
+    border-right:25px solid #31708f; 
+}
 
 .ong{
     border-width:1px 2px 3px 2px;
@@ -74,8 +94,9 @@ h1,h2,h3,h4,h5,h6,a{
 
 
 /* style du bloc ul */
-.menu-vertical {
-  width: 200px; /* optionnel, c'est pour la démo */
+.menu-vertical { 
+  margin-left: 20px;
+  width: 210px; /* optionnel, c'est pour la démo */
   list-style: none; /* supprime les puces de liste */
   padding: 4px; /* on fait un peu de place autour des liens */
   margin: 0; /* on annule les marges */
