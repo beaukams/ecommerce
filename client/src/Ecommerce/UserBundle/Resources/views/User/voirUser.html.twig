@@ -1,0 +1,11 @@
+{% extends "EcommerceUserBundle::base.html.twig" %}
+{% block body %}
+	<div>
+		<label>Iden: <div>{{ user.id_user }}</div></label><br>
+		<label>User: <div>{{ user.nom_user }}</div></label><br>
+		<label>Prix unitaire:<div>{{ user.prix_unitaire }}</div></label><br>
+		<label>Details :<div>{{ user.details_user }}</div></label><br>
+		<label>Catégorie : <div>{{ user.id_typeuser }}</div></label><br>
+		<label>Departement : <div>{{ user.id_departement }}</div></label><br>
+	</div>
+{% endblock %}

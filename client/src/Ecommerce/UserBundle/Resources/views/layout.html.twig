@@ -8,9 +8,9 @@
                     {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
                 </a>
 
-                Connecté en tant que {{ app.user.username }} - <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                Connecté en tant que {{ app.user.username }}
             {% else %}
-                <a href="{{ path('fos_user_security_login') }}">Connexion {#{ 'layout.login'|trans({}, 'FOSUserBundle') }#}</a>
+                {# <a href="{{ path('fos_user_security_login') }}">Connexion { 'layout.login'|trans({}, 'FOSUserBundle') }</a> #}
             {% endif %}
         </div>
 
