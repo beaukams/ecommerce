@@ -1,3 +1,13 @@
+ecommerce_restaurant:
+    resource: "@EcommerceRestaurantBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ecommerce_culture:
+    resource: "@EcommerceCultureBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 ecommerce_boutique:
     resource: "@EcommerceBoutiqueBundle/Resources/config/routing.yml"
     prefix:   /boutique
