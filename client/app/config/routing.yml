@@ -1,12 +1,3 @@
-ecommerce_restaurant:
-    resource: "@EcommerceRestaurantBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
-ecommerce_culture:
-    resource: "@EcommerceCultureBundle/Controller/"
-    type:     annotation
-    prefix:   /
 
 ecommerce_boutique:
     resource: "@EcommerceBoutiqueBundle/Resources/config/routing.yml"
@@ -14,14 +5,20 @@ ecommerce_boutique:
 
 ecommerce_user:
     resource: "@EcommerceUserBundle/Resources/config/routing.yml"
-    prefix:   /user
+    prefix:   /
     
 HotelBundle:
     resource: "@HotelBundle/Controller/"
     type:     annotation
     prefix:   /hotel
 
+ecommerce_restaurant:
+    resource: "@EcommerceRestaurantBundle/Resources/config/routing.yml"
+    prefix:   /restaurant
 
+ecommerce_culture:
+    resource: "@EcommerceCultureBundle/Resources/config/routing.yml"
+    prefix:   /culture
 
 app:
     resource: "@AppBundle/Controller/"

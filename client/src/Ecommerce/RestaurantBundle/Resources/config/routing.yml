@@ -1,0 +1,29 @@
+ecommerce_restaurant_homepage:
+    path:     /
+    defaults: { _controller: EcommerceRestaurantBundle:Restaurant:index }
+
+ajouteRestaurant:
+    pattern:  /ajoute
+    defaults: { _controller: EcommerceRestaurantBundle:Restaurant:ajoute }
+
+modifieRestaurant:
+    pattern:  /modifie/{id}
+    defaults: { _controller: EcommerceRestaurantBundle:Restaurant:modifie }
+    requirements:
+      id:  \d+
+
+supprimeRestaurant:
+    pattern:  /supprime/{id}
+    defaults: { _controller: EcommerceRestaurantBundle:Restaurant:supprime }
+    requirements:
+      id:  \d+
+
+listeRestaurant:
+    pattern:  /liste
+    defaults: { _controller: EcommerceRestaurantBundle:Restaurant:liste }
+
+voirRestaurant:
+    pattern:  /voir/{id}
+    defaults: { _controller: EcommerceRestaurantBundle:Restaurant:voir }
+    requirements:
+      id:  \d+

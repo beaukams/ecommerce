@@ -1,0 +1,3 @@
+ecommerce_culture_homepage:
+    path:     /
+    defaults: { _controller: EcommerceCultureBundle::index }

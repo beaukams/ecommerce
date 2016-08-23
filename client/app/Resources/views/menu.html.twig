@@ -7,8 +7,8 @@
 		  <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
 		    <div class="w3ls_vegetables">
 		      <ul>
-		        <li><a href="{{ path('ajouteCommande') }}">Produits halieutiques</a></li>
-		        <li><a href="{{ path('listeCommande') }}">Fruits et légumes</a></li>
+		        <li><a href="{{ path('listeProduit', {'type_produit' : '1'}) }}">Produits halieutiques</a></li>
+		        <li><a href="{{ path('listeProduit', {'type_produit' : '2'}) }}">Fruits et légumes</a></li>
 		        <li><a href="{{ path('listeCommande') }}">Divers </a></li>
 		      </ul>
 		    </div>                  
@@ -16,12 +16,12 @@
 		  <i>/</i>
 		</li>
 		<li class="dropdown">
-		  <a href="{{ path('ecommerce_boutique_homepage') }}" class="dropdown-toggle" data-toggle="dropdown">Bienvenue en Casa <span class="caret"></span></a>
+		  <a href="{{ path('ecommerce_restaurant_homepage') }}" class="dropdown-toggle" data-toggle="dropdown">Bienvenue en Casa <span class="caret"></span></a>
 		  <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
 		    <div class="w3ls_vegetables">
 		      <ul>
-		        <li><a href="{{ path('ajouteCommande') }}">Hotels</a></li>
-		        <li><a href="{{ path('listeCommande') }}">Restaurants</a></li>
+		        <li><a href="">Hotels</a></li><br/>
+		        <li><a href="{{ path('ecommerce_restaurant_homepage') }}">Restaurants</a></li>
 		      </ul>
 		    </div>                  
 		  </div> 
@@ -29,7 +29,7 @@
 		</li>
 
 		<li class="dropdown">
-		  <a href="{{ path('ecommerce_boutique_homepage') }}" class="dropdown-toggle" data-toggle="dropdown">Culture<span class="caret"></span></a>
+		  <a href="" class="dropdown-toggle" data-toggle="dropdown">Culture<span class="caret"></span></a>
 		  <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
 		    <div class="w3ls_vegetables">
 		      <ul>
@@ -40,7 +40,7 @@
 		  <i>/</i> 
 		</li>
 
-		<li><a>Annonces</a><i></i></li>
+		<li><a href="{{ path('annonces') }}">Annonces</a><i></i></li>
 	</ul>
 
 {% endblock %}

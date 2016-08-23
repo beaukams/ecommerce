@@ -64,8 +64,10 @@ class ProduitController extends Controller
     public function voirProduitAction($id){
     	
         if($id >= 0){
+
             //on recupere le produit
             $produit = $this->reqSelectProduit($id);
+            
             if($produit === null){
                 return $this->render("EcommerceBoutiqueBundle:Produit:errorProduitInexistant.html.twig");
             }else{
@@ -75,11 +77,11 @@ class ProduitController extends Controller
             }
         }
         else{
-            return $this->render("EcommerceBoutiqueBundle:Produit:listeProduit.html.twig");
+            return $this->render("EcommerceBoutiqueBundle:Produit:listeAllProduit.html.twig");
         }
     }
 
-    public function listeProduitAction(){
+    public function listeAllProduitAction(){
 
             //on recupere le produit
             $produits = $this->reqSelectAllProduit();
@@ -94,10 +96,33 @@ class ProduitController extends Controller
                     $res[$key] = $produit->getContenu();
                 }
 
-                return $this->render("EcommerceBoutiqueBundle:Produit:listeProduit.html.twig", array('produits' => $res ));
+                return $this->render("EcommerceBoutiqueBundle:Produit:listeAllProduit.html.twig", array('produits' => $res ));
             }
     }
 
+    public function listeProduitAction($type_produit){
+
+            //on recupere le produit
+            $produits = $this->reqSelectAllProduit();
+
+            if($produits === null){
+                return $this->render("EcommerceBoutiqueBundle:Produit:errorProduitInexistant.html.twig");
+            }else{
+
+                //on affiche
+                $res = array();
+                $inc = 0;
+                foreach ($produits as $key => $produit) {
+                    if($produit->getContenu()["id_typeproduit"] == $type_produit){
+                        $res[$inc] = $produit->getContenu();
+                        $inc++;
+                    }
+                    
+                }
+
+                return $this->render("EcommerceBoutiqueBundle:Produit:listeAllProduit.html.twig", array('produits' => $res ));
+            }
+    }
 
     public function modifieProduitAction($id){
 
@@ -133,7 +158,7 @@ class ProduitController extends Controller
            return $this->render("EcommerceBoutiqueBundle:Produit:modifieProduit.html.twig", array('form' => $form->createView(), 'id' => $id ));
 
         }else{
-            return $this->redirect($this->generateUrl('listeProduit'));
+            return $this->redirect($this->generateUrl('listeAllProduit'));
         }
     }
 
@@ -144,10 +169,10 @@ class ProduitController extends Controller
             //on supprime le produit
             $this->reqRemoveProduitById($id);
            
-            return $this->redirect($this->generateUrl('listeProduit'));
+            return $this->redirect($this->generateUrl('listeAllProduit'));
         }
         else{
-            return $this->redirect($this->generateUrl('listeProduit'));
+            return $this->redirect($this->generateUrl('listeAllProduit'));
         }
     }
 
