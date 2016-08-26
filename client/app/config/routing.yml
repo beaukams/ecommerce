@@ -1,3 +1,6 @@
+d_hotel:
+    resource: "@DHotelBundle/Resources/config/routing.yml"
+    prefix:   /hotel
 
 ecommerce_boutique:
     resource: "@EcommerceBoutiqueBundle/Resources/config/routing.yml"
@@ -6,11 +9,6 @@ ecommerce_boutique:
 ecommerce_user:
     resource: "@EcommerceUserBundle/Resources/config/routing.yml"
     prefix:   /
-    
-HotelBundle:
-    resource: "@HotelBundle/Controller/"
-    type:     annotation
-    prefix:   /hotel
 
 ecommerce_restaurant:
     resource: "@EcommerceRestaurantBundle/Resources/config/routing.yml"
@@ -35,7 +33,7 @@ fos_user_profile:
 fos_user_register:
   resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
   prefix: /register
-  
+
 fos_user_resetting:
   resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
   prefix: /resetting

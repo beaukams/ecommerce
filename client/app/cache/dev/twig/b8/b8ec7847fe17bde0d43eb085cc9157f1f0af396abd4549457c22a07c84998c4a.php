@@ -15,11 +15,11 @@ class __TwigTemplate_82a42f2b882f1dd00eb4210325afb31e5e39cb062e521ce2dc03faa6f7d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bb0e837d7d0191c29e185487eca00c5484ee2d73f72e3b1f482b80e14e2b34e5 = $this->env->getExtension("native_profiler");
-        $__internal_bb0e837d7d0191c29e185487eca00c5484ee2d73f72e3b1f482b80e14e2b34e5->enter($__internal_bb0e837d7d0191c29e185487eca00c5484ee2d73f72e3b1f482b80e14e2b34e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EcommerceRestaurantBundle:Restaurant:modifieRestaurant.html.twig"));
+        $__internal_b17f246ffacf15a21a734e07b3808488dba0b3c8c7db31d23952eee5a538fbb7 = $this->env->getExtension("native_profiler");
+        $__internal_b17f246ffacf15a21a734e07b3808488dba0b3c8c7db31d23952eee5a538fbb7->enter($__internal_b17f246ffacf15a21a734e07b3808488dba0b3c8c7db31d23952eee5a538fbb7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EcommerceRestaurantBundle:Restaurant:modifieRestaurant.html.twig"));
 
         
-        $__internal_bb0e837d7d0191c29e185487eca00c5484ee2d73f72e3b1f482b80e14e2b34e5->leave($__internal_bb0e837d7d0191c29e185487eca00c5484ee2d73f72e3b1f482b80e14e2b34e5_prof);
+        $__internal_b17f246ffacf15a21a734e07b3808488dba0b3c8c7db31d23952eee5a538fbb7->leave($__internal_b17f246ffacf15a21a734e07b3808488dba0b3c8c7db31d23952eee5a538fbb7_prof);
 
     }
 

@@ -105,6 +105,43 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/hotel')) {
+            // d_hotel_homepage
+            if (rtrim($pathinfo, '/') === '/hotel') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'd_hotel_homepage');
+                }
+
+                return array (  '_controller' => 'Ecommerce\\DHotelBundle\\Controller\\DHotelController::indexAction',  '_route' => 'd_hotel_homepage',);
+            }
+
+            // ajoutehotel
+            if ($pathinfo === '/hotel/ajoute') {
+                return array (  '_controller' => 'Ecommerce\\DHotelBundle\\Controller\\DHotelController::ajouteHotelAction',  '_route' => 'ajoutehotel',);
+            }
+
+            // modifiehotel
+            if (0 === strpos($pathinfo, '/hotel/modifie') && preg_match('#^/hotel/modifie/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifiehotel')), array (  '_controller' => 'Ecommerce\\DHotelBundle\\Controller\\DHotelController::modifieHotelAction',));
+            }
+
+            // supprimehotel
+            if (0 === strpos($pathinfo, '/hotel/supprime') && preg_match('#^/hotel/supprime/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'supprimehotel')), array (  '_controller' => 'Ecommerce\\DHotelBundle\\Controller\\DHotelController::supprimeHotelAction',));
+            }
+
+            // listehotel
+            if ($pathinfo === '/hotel/liste') {
+                return array (  '_controller' => 'Ecommerce\\DHotelBundle\\Controller\\DHotelController::listeHotelAction',  '_route' => 'listehotel',);
+            }
+
+            // voirhotel
+            if (0 === strpos($pathinfo, '/hotel/voir') && preg_match('#^/hotel/voir/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'voirhotel')), array (  '_controller' => 'Ecommerce\\DHotelBundle\\Controller\\DHotelController::voirHotelAction',));
+            }
+
+        }
+
         if (0 === strpos($pathinfo, '/boutique')) {
             // ecommerce_boutique_homepage
             if (rtrim($pathinfo, '/') === '/boutique') {
@@ -179,11 +216,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Ecommerce\\BoutiqueBundle\\Controller\\CommandeController::listeCommandeAction',  '_route' => 'listeCommande',);
             }
 
-        }
-
-        // hotels
-        if (0 === strpos($pathinfo, '/hotel/hotel') && preg_match('#^/hotel/hotel/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'hotels')), array (  '_controller' => 'Ecommerce\\HotelBundle\\Controller\\DefaultController::indexAction',));
         }
 
         if (0 === strpos($pathinfo, '/restaurant')) {

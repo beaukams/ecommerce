@@ -19,9 +19,9 @@ class AppKernel extends Kernel
             new Ecommerce\BoutiqueBundle\EcommerceBoutiqueBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Ecommerce\UserBundle\EcommerceUserBundle(),
-            new Ecommerce\HotelBundle\HotelBundle(),
             new Ecommerce\CultureBundle\EcommerceCultureBundle(),
             new Ecommerce\RestaurantBundle\EcommerceRestaurantBundle(),
+            new Ecommerce\DHotelBundle\DHotelBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

@@ -15,8 +15,8 @@ class __TwigTemplate_0544167f855b2ee73b6c1d24dc5eb4720a731c028251c97357c27bbc8fb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e67c1ad03f7d0771f36a5af769eeefbdab267cb10875d17dd396182e1a051944 = $this->env->getExtension("native_profiler");
-        $__internal_e67c1ad03f7d0771f36a5af769eeefbdab267cb10875d17dd396182e1a051944->enter($__internal_e67c1ad03f7d0771f36a5af769eeefbdab267cb10875d17dd396182e1a051944_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EcommerceUserBundle::index.html.twig"));
+        $__internal_88883b82b0c41f9390bc235b9a434b98db02748bee46cda2c655f45d123f5bf9 = $this->env->getExtension("native_profiler");
+        $__internal_88883b82b0c41f9390bc235b9a434b98db02748bee46cda2c655f45d123f5bf9->enter($__internal_88883b82b0c41f9390bc235b9a434b98db02748bee46cda2c655f45d123f5bf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EcommerceUserBundle::index.html.twig"));
 
         // line 1
         echo "<!--
@@ -715,7 +715,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 <!-- Mirrored from p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Aug 2016 12:37:18 GMT -->
 </html>";
         
-        $__internal_e67c1ad03f7d0771f36a5af769eeefbdab267cb10875d17dd396182e1a051944->leave($__internal_e67c1ad03f7d0771f36a5af769eeefbdab267cb10875d17dd396182e1a051944_prof);
+        $__internal_88883b82b0c41f9390bc235b9a434b98db02748bee46cda2c655f45d123f5bf9->leave($__internal_88883b82b0c41f9390bc235b9a434b98db02748bee46cda2c655f45d123f5bf9_prof);
 
     }
 

@@ -19,9 +19,9 @@
       <parameter key="EcommerceBoutiqueBundle">Ecommerce\BoutiqueBundle\EcommerceBoutiqueBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="EcommerceUserBundle">Ecommerce\UserBundle\EcommerceUserBundle</parameter>
-      <parameter key="HotelBundle">Ecommerce\HotelBundle\HotelBundle</parameter>
       <parameter key="EcommerceCultureBundle">Ecommerce\CultureBundle\EcommerceCultureBundle</parameter>
       <parameter key="EcommerceRestaurantBundle">Ecommerce\RestaurantBundle\EcommerceRestaurantBundle</parameter>
+      <parameter key="DHotelBundle">Ecommerce\DHotelBundle\DHotelBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -968,7 +968,6 @@
             <argument>/var/www/Symphony/versionecommerce/ecommerce/client/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fr.xlf</argument>
             <argument>/var/www/Symphony/versionecommerce/ecommerce/client/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.fr.yml</argument>
             <argument>/var/www/Symphony/versionecommerce/ecommerce/client/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.fr.yml</argument>
-            <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/HotelBundle/Resources/translations/messages.fr.xliff</argument>
           </argument>
           <argument key="sl" type="collection">
             <argument>/var/www/Symphony/versionecommerce/ecommerce/client/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sl.xlf</argument>
@@ -2174,7 +2173,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>57bcd1bbca0690.36486929</argument>
+            <argument>57bf90c3173e66.59494009</argument>
           </service>
         </argument>
         <argument type="service">
@@ -2195,7 +2194,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>57bcd1bbca0690.36486929</argument>
+            <argument>57bf90c3173e66.59494009</argument>
           </service>
         </argument>
       </argument>
@@ -2403,7 +2402,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>57bcd1bbca0690.36486929</argument>
+            <argument>57bf90c3173e66.59494009</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2594,7 +2593,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>57bcd1bbca0690.36486929</argument>
+            <argument>57bf90c3173e66.59494009</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2994,8 +2993,8 @@
               <argument key="EcommerceBoutiqueBundle">Ecommerce\BoutiqueBundle\Entity</argument>
               <argument key="FOSUserBundle">FOS\UserBundle\Entity</argument>
               <argument key="EcommerceUserBundle">Ecommerce\UserBundle\Entity</argument>
-              <argument key="HotelBundle">Ecommerce\HotelBundle\Entity</argument>
               <argument key="EcommerceRestaurantBundle">Ecommerce\RestaurantBundle\Entity</argument>
+              <argument key="DHotelBundle">Ecommerce\DHotelBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -3017,8 +3016,8 @@
                       <argument type="collection">
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/BoutiqueBundle/Entity</argument>
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/UserBundle/Entity</argument>
-                        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/HotelBundle/Entity</argument>
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/RestaurantBundle/Entity</argument>
+                        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/DHotelBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -3031,8 +3030,8 @@
                       <argument type="collection">
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/BoutiqueBundle/Entity</argument>
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/UserBundle/Entity</argument>
-                        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/HotelBundle/Entity</argument>
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/RestaurantBundle/Entity</argument>
+                        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/DHotelBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -3045,12 +3044,12 @@
                       <argument type="collection">
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/BoutiqueBundle/Entity</argument>
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/UserBundle/Entity</argument>
-                        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/HotelBundle/Entity</argument>
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/RestaurantBundle/Entity</argument>
+                        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/DHotelBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
-                  <argument>Ecommerce\HotelBundle\Entity</argument>
+                  <argument>Ecommerce\RestaurantBundle\Entity</argument>
                 </call>
                 <call method="addDriver">
                   <argument type="service">
@@ -3059,12 +3058,12 @@
                       <argument type="collection">
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/BoutiqueBundle/Entity</argument>
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/UserBundle/Entity</argument>
-                        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/HotelBundle/Entity</argument>
                         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/RestaurantBundle/Entity</argument>
+                        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/DHotelBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
-                  <argument>Ecommerce\RestaurantBundle\Entity</argument>
+                  <argument>Ecommerce\DHotelBundle\Entity</argument>
                 </call>
                 <call method="addDriver">
                   <argument type="service">
@@ -3593,16 +3592,16 @@
         <argument>EcommerceUser</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/HotelBundle/Resources/views</argument>
-        <argument>Hotel</argument>
-      </call>
-      <call method="addPath">
         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/CultureBundle/Resources/views</argument>
         <argument>EcommerceCulture</argument>
       </call>
       <call method="addPath">
         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/RestaurantBundle/Resources/views</argument>
         <argument>EcommerceRestaurant</argument>
+      </call>
+      <call method="addPath">
+        <argument>/var/www/Symphony/versionecommerce/ecommerce/client/src/Ecommerce/DHotelBundle/Resources/views</argument>
+        <argument>DHotel</argument>
       </call>
       <call method="addPath">
         <argument>/var/www/Symphony/versionecommerce/ecommerce/client/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>

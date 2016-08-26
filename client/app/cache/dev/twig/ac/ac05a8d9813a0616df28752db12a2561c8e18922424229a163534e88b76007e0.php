@@ -15,8 +15,8 @@ class __TwigTemplate_4d1ef2fe5af14357c316ef80c88982e7a389e94ffa6f47996f87fdb6263
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b6e4fb4280d844420284ec5666bcd19d49b5d9812ec5615b82aedc4c5d74f14d = $this->env->getExtension("native_profiler");
-        $__internal_b6e4fb4280d844420284ec5666bcd19d49b5d9812ec5615b82aedc4c5d74f14d->enter($__internal_b6e4fb4280d844420284ec5666bcd19d49b5d9812ec5615b82aedc4c5d74f14d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EcommerceBoutiqueBundle::menuBoutique.html.twig"));
+        $__internal_6e2070dcec826a63522afe7bc0e40fcd65d6bd3ec3ede481a1168d2418d51f66 = $this->env->getExtension("native_profiler");
+        $__internal_6e2070dcec826a63522afe7bc0e40fcd65d6bd3ec3ede481a1168d2418d51f66->enter($__internal_6e2070dcec826a63522afe7bc0e40fcd65d6bd3ec3ede481a1168d2418d51f66_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "EcommerceBoutiqueBundle::menuBoutique.html.twig"));
 
         // line 1
         echo "<ul class=\"nav navbar-nav nav_1\">
@@ -62,7 +62,7 @@ class __TwigTemplate_4d1ef2fe5af14357c316ef80c88982e7a389e94ffa6f47996f87fdb6263
   
 </ul>";
         
-        $__internal_b6e4fb4280d844420284ec5666bcd19d49b5d9812ec5615b82aedc4c5d74f14d->leave($__internal_b6e4fb4280d844420284ec5666bcd19d49b5d9812ec5615b82aedc4c5d74f14d_prof);
+        $__internal_6e2070dcec826a63522afe7bc0e40fcd65d6bd3ec3ede481a1168d2418d51f66->leave($__internal_6e2070dcec826a63522afe7bc0e40fcd65d6bd3ec3ede481a1168d2418d51f66_prof);
 
     }
 

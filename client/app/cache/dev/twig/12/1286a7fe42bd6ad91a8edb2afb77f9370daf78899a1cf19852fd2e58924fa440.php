@@ -15,8 +15,8 @@ class __TwigTemplate_a01cd98bc9353b681ad5ce94e85b6595c9b2baa5742c87b0972c367bbce
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_59832bb0beae8e66a03f51cb9c2ccb0fae4d07bb85e7b9039d67caba68c77065 = $this->env->getExtension("native_profiler");
-        $__internal_59832bb0beae8e66a03f51cb9c2ccb0fae4d07bb85e7b9039d67caba68c77065->enter($__internal_59832bb0beae8e66a03f51cb9c2ccb0fae4d07bb85e7b9039d67caba68c77065_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::_base.html.twig"));
+        $__internal_154a6579ea2a5fe7c7ce0a57e0cfb411b40a6b23b750eec3566500b5457ed5b3 = $this->env->getExtension("native_profiler");
+        $__internal_154a6579ea2a5fe7c7ce0a57e0cfb411b40a6b23b750eec3566500b5457ed5b3->enter($__internal_154a6579ea2a5fe7c7ce0a57e0cfb411b40a6b23b750eec3566500b5457ed5b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::_base.html.twig"));
 
         // line 1
         echo "
@@ -714,7 +714,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 <!-- Mirrored from p.w3layouts.com/demos/july-2016/07-07-2016/grocery_store/web/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Aug 2016 12:37:18 GMT -->
 </html>";
         
-        $__internal_59832bb0beae8e66a03f51cb9c2ccb0fae4d07bb85e7b9039d67caba68c77065->leave($__internal_59832bb0beae8e66a03f51cb9c2ccb0fae4d07bb85e7b9039d67caba68c77065_prof);
+        $__internal_154a6579ea2a5fe7c7ce0a57e0cfb411b40a6b23b750eec3566500b5457ed5b3->leave($__internal_154a6579ea2a5fe7c7ce0a57e0cfb411b40a6b23b750eec3566500b5457ed5b3_prof);
 
     }
 

@@ -1,0 +1,12 @@
+{% extends "DHotelBundle::base.html.twig" %}
+{% block le_contenu  %}
+	<div>
+		<label>Iden: <div>{{ Hotel.id }}</div></label><br>
+		<label>Hotel: <div>{{ Hotel.nomHotel }}</div></label><br>
+		<label>Nom Photos:<div>{{ Hotel.photosHotel }}</div></label><br>
+		<label>Departement :<div>{{ Hotel.departementHotel }}</div></label><br>
+		<label>Adresse : <div>{{ Hotel.adresseHotel }}</div></label><br>
+		<label>Telephone : <div>{{ Hotel.telephoneHotel }}</div></label><br>
+		<label>Mail : <div>{{ Hotel.mailHotel }}</div></label><br>
+	</div>
+{% endblock %}

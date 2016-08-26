@@ -1,0 +1,30 @@
+d_hotel_homepage:
+    path:     /
+    defaults: { _controller: DHotelBundle:DHotel:index }
+
+
+ajoutehotel:
+    pattern:  /ajoute
+    defaults: { _controller: DHotelBundle:DHotel:ajouteHotel }
+
+modifiehotel:
+    pattern:  /modifie/{id}
+    defaults: { _controller:DHotelBundle:DHotel:modifieHotel }
+    requirements:
+      id:  \d+
+
+supprimehotel:
+    pattern:  /supprime/{id}
+    defaults: { _controller: DHotelBundle:DHotel:supprimeHotel }
+    requirements:
+      id:  \d+
+
+listehotel:
+    pattern:  /liste
+    defaults: { _controller: DHotelBundle:DHotel:listeHotel }
+
+voirhotel:
+    pattern:  /voir/{id}
+    defaults: { _controller: DHotelBundle:DHotel:voirHotel }
+    requirements:
+      id:  \d+

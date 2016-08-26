@@ -1,0 +1,8 @@
+{% extends "::base.html.twig" %}
+{% block title %}Hotel:{{ parent() }} {% endblock %}
+
+{% block barre_location %}{{ parent() }}Hotel{% endblock %}
+
+{% block menu_nav %}
+  {% include "DHotelBundle::menuHotel.html.twig" %}
+{% endblock %}
