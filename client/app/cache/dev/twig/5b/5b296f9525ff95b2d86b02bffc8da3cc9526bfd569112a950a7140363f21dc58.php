@@ -15,18 +15,12 @@ class __TwigTemplate_208636c920829c1c564cf83ef4930da6fdb01ca943005d7c82a59e8481d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8d538d1fd884d5c4a5f646c0eb2f692750579eaa7c4b089cf426412ebf54e6f7 = $this->env->getExtension("native_profiler");
-        $__internal_8d538d1fd884d5c4a5f646c0eb2f692750579eaa7c4b089cf426412ebf54e6f7->enter($__internal_8d538d1fd884d5c4a5f646c0eb2f692750579eaa7c4b089cf426412ebf54e6f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::header.html.twig"));
+        $__internal_77934136b2ddb6aa71699adb24b7a53f20af53381b2434b60246264dcc478af6 = $this->env->getExtension("native_profiler");
+        $__internal_77934136b2ddb6aa71699adb24b7a53f20af53381b2434b60246264dcc478af6->enter($__internal_77934136b2ddb6aa71699adb24b7a53f20af53381b2434b60246264dcc478af6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::header.html.twig"));
 
         // line 1
         echo "
  <div class=\"agileits_header\">
-    <div class=\"w3l_offers\">
-      <a href=\"";
-        // line 4
-        echo $this->env->getExtension('routing')->getPath("casa");
-        echo "\">Senegal/Casamance</a>
-    </div>
     <div class=\"w3l_search\">
       <form action=\"#\" method=\"post\">
         <input type=\"text\" name=\"Product\" value=\"Rechercher\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Rechercher...';}\" required=\"\">
@@ -50,11 +44,11 @@ class __TwigTemplate_208636c920829c1c564cf83ef4930da6fdb01ca943005d7c82a59e8481d
             <div class=\"w3ls_vegetables\">
               <ul class=\"dropdown-menu drp-mnu\">
                 <li><a href=\"";
-        // line 28
+        // line 25
         echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
         echo "\"><center>Se connecter</center></a></li> 
                 <li><a href=\"";
-        // line 29
+        // line 26
         echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
         echo "\"><center>Se deconnecter</center></a></li>
                 <li><a href=\"\"><center>Creer un compte</center></a></li>
@@ -66,7 +60,7 @@ class __TwigTemplate_208636c920829c1c564cf83ef4930da6fdb01ca943005d7c82a59e8481d
     </div>
     <div class=\"w3l_header_right1\">
       <h2><a href=\"";
-        // line 38
+        // line 35
         echo $this->env->getExtension('routing')->getPath("contactus");
         echo "\">Nous contacter</a></h2>
     </div>
@@ -81,9 +75,9 @@ class __TwigTemplate_208636c920829c1c564cf83ef4930da6fdb01ca943005d7c82a59e8481d
 
       <div class=\"w3ls_logo_products_left1\">
           ";
-        // line 50
-        $this->loadTemplate("::menu.html.twig", "::header.html.twig", 50)->display($context);
-        // line 51
+        // line 47
+        $this->loadTemplate("::menu.html.twig", "::header.html.twig", 47)->display($context);
+        // line 48
         echo "      </div>
 
       <div class=\"clearfix\"> </div>
@@ -91,7 +85,7 @@ class __TwigTemplate_208636c920829c1c564cf83ef4930da6fdb01ca943005d7c82a59e8481d
   </div>
 ";
         
-        $__internal_8d538d1fd884d5c4a5f646c0eb2f692750579eaa7c4b089cf426412ebf54e6f7->leave($__internal_8d538d1fd884d5c4a5f646c0eb2f692750579eaa7c4b089cf426412ebf54e6f7_prof);
+        $__internal_77934136b2ddb6aa71699adb24b7a53f20af53381b2434b60246264dcc478af6->leave($__internal_77934136b2ddb6aa71699adb24b7a53f20af53381b2434b60246264dcc478af6_prof);
 
     }
 
@@ -107,14 +101,11 @@ class __TwigTemplate_208636c920829c1c564cf83ef4930da6fdb01ca943005d7c82a59e8481d
 
     public function getDebugInfo()
     {
-        return array (  87 => 51,  85 => 50,  70 => 38,  58 => 29,  54 => 28,  27 => 4,  22 => 1,);
+        return array (  81 => 48,  79 => 47,  64 => 35,  52 => 26,  48 => 25,  22 => 1,);
     }
 }
 /* */
 /*  <div class="agileits_header">*/
-/*     <div class="w3l_offers">*/
-/*       <a href="{{ path('casa') }}">Senegal/Casamance</a>*/
-/*     </div>*/
 /*     <div class="w3l_search">*/
 /*       <form action="#" method="post">*/
 /*         <input type="text" name="Product" value="Rechercher" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Rechercher...';}" required="">*/
